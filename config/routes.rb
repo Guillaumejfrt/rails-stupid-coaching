@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/ask', to: 'coaching#ask'
 
+  get '/answer', to: 'coaching#answer'
+
   get 'pages/contact'
 
   get 'pages/about'

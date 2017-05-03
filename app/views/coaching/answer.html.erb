@@ -1,2 +1,21 @@
-<h1>Coaching#answer</h1>
-<p>Find me in app/views/coaching/answer.html.erb</p>
+
+<div class="wrapper text-center">
+  <h1>Coaching#answer</h1>
+  <div class="container">
+    <p><%= @question %></p>
+    <p class="person">- You</p>
+    <% good_input = "I am going to work right now!" %>
+    <% if @question.upcase == good_input.upcase <%>
+      <p><%= "Great!" %></p>
+    <% elsif @question.strip[-1] == "?" %>
+      <p><%= "Silly question, get dressed and go to work!" %></p>
+    <% else %>
+      <p><%= "I don't care, get dressed and go to work!" %></p>
+    <% end %>
+    <p class="person">- Your coach</p>
+
+    <%= link_to "Ask another question", "/ask" %>
+  </div>
+</div>
+
+
